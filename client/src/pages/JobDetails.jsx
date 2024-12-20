@@ -9,7 +9,7 @@ const JobDetails = () => {
   const [startDate, setStartDate] = useState(new Date())
 
   const data = useLoaderData()
-  const {category, description, job_titie} = data;
+  const {category, description, job_title} = data;
 
   return (
     <div className='flex flex-col md:flex-row justify-around gap-5  items-center min-h-[calc(100vh-306px)] md:max-w-screen-xl mx-auto '>
@@ -26,7 +26,7 @@ const JobDetails = () => {
 
         <div>
           <h1 className='mt-2 text-3xl font-semibold text-gray-800 '>
-            {job_titie}
+            {job_title}
           </h1>
 
           <p className='mt-2 text-lg text-gray-600 '>
