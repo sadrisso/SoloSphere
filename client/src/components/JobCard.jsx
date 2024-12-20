@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 
 const JobCard = ({ job }) => {
 
-  console.log("single job: ", job)
   const { category, description } = job || {};
 
   return (
@@ -15,12 +14,10 @@ const JobCard = ({ job }) => {
       </div>
 
       <div>
-        <h1 className='mt-2 text-lg font-semibold text-gray-800 '>{description}</h1>
+        <h1 className='mt-2 text-lg font-semibold text-gray-800 '></h1>
 
         <p className='mt-2 text-sm text-gray-600 '>
-          Dramatically redefine bleeding-edge infrastructures after
-          client-focused value. Intrinsicly seize user-centric partnerships
-          through out-of-the-box architectures. Distinctively.
+          {description.substring(0, 200)}...
         </p>
         <p className='mt-2 text-sm font-bold text-gray-600 '>Range: $500 - $600</p>
         <p className='mt-2 text-sm font-bold text-gray-600 '>Total Bids: 0</p>
