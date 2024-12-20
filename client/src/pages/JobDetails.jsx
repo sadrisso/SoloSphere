@@ -1,10 +1,15 @@
-import { useState } from 'react'
 
+import { useState } from 'react'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
+import { useLoaderData } from 'react-router-dom'
 
 const JobDetails = () => {
+
   const [startDate, setStartDate] = useState(new Date())
+
+  const data = useLoaderData()
+  const {category, description, job_titie} = data;
 
   return (
     <div className='flex flex-col md:flex-row justify-around gap-5  items-center min-h-[calc(100vh-306px)] md:max-w-screen-xl mx-auto '>
@@ -15,19 +20,17 @@ const JobDetails = () => {
             Deadline: 28/05/2024
           </span>
           <span className='px-4 py-1 text-xs text-blue-800 uppercase bg-blue-200 rounded-full '>
-            Web Development
+            {category}
           </span>
         </div>
 
         <div>
           <h1 className='mt-2 text-3xl font-semibold text-gray-800 '>
-            Web Development
+            {job_titie}
           </h1>
 
           <p className='mt-2 text-lg text-gray-600 '>
-            Dramatically redefine bleeding-edge infrastructures after
-            client-focused value. Intrinsicly seize user-centric partnerships
-            through out-of-the-box architectures. Distinctively.
+            {description}
           </p>
           <p className='mt-6 text-sm font-bold text-gray-600 '>
             Buyer Details:
