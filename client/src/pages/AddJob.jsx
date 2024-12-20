@@ -70,6 +70,7 @@ const AddJob = () => {
               {/* Date Picker Input Field */}
               <DatePicker
                 className='border p-2 rounded-md'
+                name="date"
                 selected={startDate}
                 onChange={date => setStartDate(date)}
               />
